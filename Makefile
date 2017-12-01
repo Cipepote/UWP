@@ -1,6 +1,6 @@
 readme:
 	echo "# UWP - A first Unix project" > readme.md
-	d=$(date)
-	echo $d >> readme.md
-	nb=$(wc -l guessinggame.sh)
+	date >> readme.md
 	echo "Lines in the guessinggame file: $nb." >> readme.md
+	wc -l guessinggame.sh >> readme.md
+	
