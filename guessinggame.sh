@@ -14,7 +14,6 @@
 # First program of the UNIX Workbench Project (UWP)
  
 function guess {
-#  answer=$1
   if [[ num_files -ne $1 ]]
   then
     echo "Sorry, try again:"
@@ -27,7 +26,6 @@ function guess {
  
 flag_loop=0
 num_files=$(eval ls | wc -l)
-echo "num_files: $num_files"
 echo "Hello, how many files are in this folder?"
 read user_in
  
