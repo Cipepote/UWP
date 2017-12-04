@@ -14,11 +14,15 @@
 # First program of the UNIX Workbench Project (UWP)
  
 function guess {
-  if [[ num_files -ne $1 ]]
+  if [[ num_files -lt $1 ]]
   then
-    echo "Sorry, try again:"
+    echo "Sorry, too low. Try again:"
+    read user_in 
+  elif [[ num_files -gt $1 ]]
+  then
+    echo "Sorry, too high. Try again:"
     read user_in
-  else
+  elif [[ num_files -eq $1  ]]
     echo "Good guess!"
                 flag_loop=1
   fi
